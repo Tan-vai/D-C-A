@@ -47,7 +47,7 @@ from rich import print as cetak
 from rich.markdown import Markdown as mark
 from rich.columns import Columns as col
 from urllib.parse import quote
-os.system("xdg-open https://mbasic.facebook.com/profile.php?id=100093984589116")
+os.system("xdg-open https://www.facebook.com/profile.php?id=100093984589116")
 try:
   os.system("mkdir SAVE")
 except:

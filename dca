@@ -79,7 +79,7 @@ class Main:
 		self.loop = 0
 		os.system("clear")
 		print(logo)
-		print(" [1] 2009-10 Cloning")
+		print(" [1] Random Clonning")
 		print("\n")
 		Finding =input(" Choose : ")
 		if Finding in ["1", "01"]:
@@ -128,7 +128,7 @@ class Main:
 			pw = pw.lower()
 			ses = requests.Session()
 			headers = {
-     'authority': 'mbasic.facebook.com',
+    'authority': 'mbasic.facebook.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-BD,en;q=0.9,bn-BD;q=0.8,bn;q=0.7,en-GB;q=0.6,en-US;q=0.5',
     'cache-control': 'max-age=0',
